@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Valentine Prank 2026 💘</title>
+  <title>Valentine Prank 2026 💘😂</title>
   <style>
     body {
       font-family: system-ui, -apple-system, sans-serif;
@@ -16,42 +16,45 @@
       flex-direction: column;
       align-items: center;
       text-align: center;
+      overflow-x: hidden;
     }
     h1, h2, h3 {
       color: #c41e3a;
-      text-shadow: 2px 2px 4px rgba(0,0,0,0.15);
+      text-shadow: 2px 2px 6px rgba(0,0,0,0.2);
     }
     .container {
-      max-width: 700px;
-      background: rgba(255,255,255,0.88);
+      max-width: 720px;
+      background: rgba(255,255,255,0.92);
       padding: 30px;
-      border-radius: 20px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+      border-radius: 24px;
+      box-shadow: 0 12px 40px rgba(0,0,0,0.18);
       margin: 20px auto;
+      position: relative;
+      z-index: 2;
     }
     .gif {
       max-width: 100%;
       height: auto;
       border-radius: 16px;
       margin: 20px 0;
-      box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+      box-shadow: 0 8px 25px rgba(0,0,0,0.15);
     }
     .buttons {
       display: flex;
       justify-content: center;
-      gap: 40px;
+      gap: 50px;
       flex-wrap: wrap;
-      margin: 30px 0;
+      margin: 35px 0;
     }
     .btn {
-      padding: 18px 50px;
-      font-size: 1.4rem;
+      padding: 18px 60px;
+      font-size: 1.5rem;
       font-weight: bold;
       border: none;
-      border-radius: 50px;
+      border-radius: 999px;
       cursor: pointer;
-      transition: all 0.3s;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+      transition: all 0.35s ease;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.18);
     }
     .btn-yes {
       background: #ff4d6d;
@@ -61,47 +64,253 @@
       background: #4dabf7;
       color: white;
     }
-    .btn-yes:hover { transform: scale(1.08); background: #e63946; }
-    .btn-no:hover  { transform: scale(1.08); background: #3b82f6; }
+    .btn-yes:hover { transform: scale(1.1); background: #e63946; }
+    .btn-no:hover  { transform: scale(1.1); background: #3b82f6; }
+
+    .grow { transform: scale(1.15) !important; }
+    .grow-more { transform: scale(1.35) !important; }
+    .grow-mega  { transform: scale(1.65) !important; }
 
     .input-area {
-      margin: 30px 0;
+      margin: 35px 0;
     }
     input[type="text"] {
-      padding: 14px 20px;
-      font-size: 1.3rem;
-      width: 80%;
-      max-width: 400px;
+      padding: 16px 24px;
+      font-size: 1.4rem;
+      width: 85%;
+      max-width: 420px;
       border: 3px solid #ff9aa2;
-      border-radius: 12px;
+      border-radius: 16px;
       outline: none;
+      transition: border-color 0.3s;
     }
     input[type="text"]:focus {
       border-color: #e63946;
     }
 
     .hidden { display: none !important; }
-    .fade-in { animation: fadeIn 0.8s; }
-    @keyframes fadeIn { from { opacity: 0; transform: translateY(15px); } to { opacity: 1; transform: translateY(0); } }
+    .fade-in { animation: fadeIn 0.9s forwards; }
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
 
     .congrats {
-      background: linear-gradient(135deg, #ffd60a, #ff9f1c);
+      background: linear-gradient(135deg, #ffd60a, #ff9f1c, #ff477e);
       color: #1d3557;
-      padding: 40px 20px;
-      border-radius: 20px;
+      padding: 50px 25px;
+      border-radius: 24px;
+      font-size: 1.6rem;
+      animation: pulse 2s infinite;
     }
+    @keyframes pulse {
+      0%,100% { transform: scale(1); }
+      50%     { transform: scale(1.04); }
+    }
+
     .sad-vibe {
       background: #2d3436;
       color: #dfe6e9;
+      padding: 40px;
+      border-radius: 20px;
     }
-    .skull { font-size: 3rem; }
+    .skull { font-size: 4rem; margin: 20px 0; }
+
+    /* Confetti container */
+    #confetti-container {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 9999;
+      overflow: hidden;
+    }
   </style>
 </head>
 <body>
 
+<div id="confetti-container"></div>
+
 <div class="container" id="main-container">
 
-  <!-- Stage 1 -->
-  <div id="stage1">
-    <h1>Valentine's Special Quiz 💕😏</h1>
-    <img class="gif" src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExbG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt0bG9uZ2p6b3l6dG9wZ3V4eG9oZmt
+  <!-- Stage 1 - Are you single? -->
+  <div id="stage1" class="fade-in">
+    <h1>Valentine's Day Quiz 2026 💘😈</h1>
+    <img class="gif" src="https://media.giphy.com/media/3o6Zt6KHxJTbXCnSvu/giphy.gif" alt="funny valentine gif">
+    <h2>Are you single? 🤨💔</h2>
+    <div class="buttons">
+      <button class="btn btn-yes" onclick="goTo('stage2_yes')">YES 😭</button>
+      <button class="btn btn-no"  onclick="goTo('stage2_no')">NO 💕</button>
+    </div>
+  </div>
+
+  <!-- Stage 2 YES branch - Single path -->
+  <div id="stage2_yes" class="hidden">
+    <h2>Do you want a Valentine? 😏❤️</h2>
+    <img class="gif" src="https://media.giphy.com/media/l0HlRnAWXxn0MhKLK/giphy.gif" alt="cute begging gif">
+    <div class="buttons">
+      <button id="single-yes-btn" class="btn btn-yes" onclick="goTo('stage_name')">YES PLS 😍</button>
+      <button id="single-no-btn" class="btn btn-no" onclick="trapSingle()">NO 😤</button>
+    </div>
+  </div>
+
+  <!-- Single trap stages -->
+  <div id="trap1" class="hidden">
+    <h2>Are you REALLY sure? 😳</h2>
+    <div class="buttons">
+      <button id="single-yes-btn" class="btn btn-yes grow" onclick="goTo('stage_name')">YES</button>
+      <button class="btn btn-no" onclick="trapSingle(2)">Are you sure sure?</button>
+    </div>
+  </div>
+
+  <div id="trap2" class="hidden">
+    <h2>Wanna die single? 😂💀</h2>
+    <div class="buttons">
+      <button id="single-yes-btn" class="btn btn-yes grow-more" onclick="goTo('stage_name')">YES</button>
+      <button class="btn btn-no" onclick="trapSingle(3)">NO</button>
+    </div>
+  </div>
+
+  <div id="trap3" class="hidden">
+    <h2>It's by force ooo! You NEED a Valentine 😤❤️</h2>
+    <div class="buttons">
+      <button id="single-yes-btn" class="btn btn-yes grow-mega" onclick="goTo('stage_name')">YES</button>
+      <button class="btn btn-no" onclick="trapSingle(4)">NO</button>
+    </div>
+  </div>
+
+  <div id="trap4" class="hidden">
+    <h2>Chai... who hurt you? 😢💔</h2>
+    <div class="buttons">
+      <button id="single-yes-btn" class="btn btn-yes grow-mega" onclick="goTo('stage_name')">YES</button>
+      <button class="btn btn-no" onclick="trapSingle(5)">NO</button>
+    </div>
+  </div>
+
+  <div id="trap5" class="hidden">
+    <h2>Okay fine... YES! 😈</h2>
+    <div class="buttons">
+      <button class="btn btn-yes grow-mega" onclick="goTo('stage_name')">YES (no choice)</button>
+    </div>
+  </div>
+
+  <!-- Stage 2 NO branch - In relationship -->
+  <div id="stage2_no" class="hidden">
+    <h2>Who is your Valentine? 😏💕</h2>
+    <img class="gif" src="https://media.giphy.com/media/26ufnwz3wDUli7GU0/giphy.gif" alt="romantic funny gif">
+    <div class="input-area">
+      <input type="text" id="valentine-name" placeholder="Type their name..." onkeydown="if(event.key==='Enter') checkValentine()">
+      <br><br>
+      <button class="btn btn-yes" onclick="checkValentine()">Submit 💌</button>
+    </div>
+  </div>
+
+  <!-- Name input for single path -->
+  <div id="stage_name" class="hidden">
+    <h2>Quick! What's your name? 😏</h2>
+    <div class="input-area">
+      <input type="text" id="your-name" placeholder="Your name..." onkeydown="if(event.key==='Enter') roastSingle()">
+      <br><br>
+      <button class="btn btn-yes" onclick="roastSingle()">Tell me 😈</button>
+    </div>
+  </div>
+
+  <!-- Result screens -->
+  <div id="result-gabriel" class="hidden congrats fade-in">
+    <h1>CONGRATULATIONS! 🎉🎊</h1>
+    <p>Your Valentine is <strong>Eloho</strong> — she's waiting for you! 😉💖</p>
+    <img class="gif" src="https://media.giphy.com/media/3o7btPCcdNniyf0ArS/giphy.gif" alt="celebration gif">
+  </div>
+
+  <div id="result-eloho" class="hidden congrats fade-in">
+    <h1>CONGRATULATIONS! 🎉🎊</h1>
+    <p>Your Valentine is <strong>Gabriel</strong> — he's waiting for you! 😉💙</p>
+    <img class="gif" src="https://media.giphy.com/media/3o7btPCcdNniyf0ArS/giphy.gif" alt="celebration gif">
+  </div>
+
+  <div id="result-chidera" class="hidden sad-vibe fade-in">
+    <h1 class="skull">💀 LEAVE THIS PLACE 💀</h1>
+    <p>Go and meet your wife, Chidera is taken! 😤</p>
+    <img class="gif" src="https://media.giphy.com/media/3o6Zt6KHxJTbXCnSvu/giphy.gif" alt="get out gif">
+  </div>
+
+  <div id="result-roast" class="hidden sad-vibe fade-in">
+    <h1>LOL just kidding 😂💀</h1>
+    <p>You'll die single forever bro 😂😂😂</p>
+    <img class="gif" src="https://media.giphy.com/media/3o6Zt6KHxJTbXCnSvu/giphy.gif" alt="lonely funny gif">
+  </div>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+
+<script>
+  let trapLevel = 0;
+
+  function goTo(stageId) {
+    document.querySelectorAll('#main-container > div').forEach(div => div.classList.add('hidden'));
+    document.getElementById(stageId).classList.remove('hidden');
+    document.getElementById(stageId).classList.add('fade-in');
+
+    // Trigger confetti on special moments
+    if (stageId.includes('result-') || stageId === 'stage_name') {
+      launchConfetti();
+    }
+  }
+
+  function trapSingle(nextLevel = null) {
+    trapLevel = nextLevel !== null ? nextLevel : trapLevel + 1;
+
+    const stages = ['trap1','trap2','trap3','trap4','trap5'];
+    if (trapLevel >= stages.length) trapLevel = stages.length - 1;
+
+    goTo(stages[trapLevel]);
+  }
+
+  function checkValentine() {
+    const name = document.getElementById('valentine-name').value.trim().toLowerCase();
+
+    if (name === 'gabriel') {
+      goTo('result-gabriel');
+    } else if (name === 'eloho') {
+      goTo('result-eloho');
+    } else if (name === 'chidera') {
+      goTo('result-chidera');
+    } else {
+      // Generic result or loop back - here we just congratulate randomly
+      goTo('result-gabriel'); // or make a funny default
+    }
+  }
+
+  function roastSingle() {
+    goTo('result-roast');
+  }
+
+  function launchConfetti() {
+    const duration = 4 * 1000;
+    const end = Date.now() + duration;
+
+    (function frame() {
+      confetti({
+        particleCount: 6,
+        angle: 60,
+        spread: 55,
+        origin: { x: 0 },
+        colors: ['#ff0000', '#ff69b4', '#ff1493', '#c71585']
+      });
+      confetti({
+        particleCount: 6,
+        angle: 120,
+        spread: 55,
+        origin: { x: 1 },
+        colors: ['#00bfff', '#1e90ff', '#4169e1', '#0000ff']
+      });
+
+      if (Date.now() < end) {
+        requestAnimationFrame(frame);
+      }
+    }());
+  }
+
+  // Optional: start with some light confetti on load
+  setTimeout(launchConfetti, 800);
+</script>
+
+</body>
+</html>
