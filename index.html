@@ -79,8 +79,18 @@
       box-shadow: 0 10px 30px rgba(0,0,0,0.4);
       font-weight: bold;
     }
+    .breakfast-vibe {
+      background: linear-gradient(135deg, #f4a261, #e76f51, #2a9d8f);
+      color: white;
+      padding: 60px 30px;
+      border-radius: 24px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+      font-size: 1.6rem;
+      line-height: 1.4;
+    }
     .crown { font-size: 4.5rem; margin: 10px 0; }
     .skull { font-size:4rem; margin:20px 0; }
+    .laugh-emoji { font-size: 2.8rem; margin: 15px 0; }
   </style>
 </head>
 <body>
@@ -202,6 +212,14 @@
     <img class="gif" src="https://media.giphy.com/media/26ufm0x3dETvD0qLC/giphy.gif" alt="king crown throne">
   </div>
 
+  <!-- New: Breakfast loading screen (for unknown names in "Who is your Valentine?") -->
+  <div id="result-breakfast" class="hidden breakfast-vibe fade-in">
+    <h1>Breakfast Loading... 🍳🥞☕</h1>
+    <div class="laugh-emoji">😂😂😂😂😂😂😂</div>
+    <p>Bro your Valentine don turn garri & groundnut since 1900 😂😂</p>
+    <img class="gif" src="https://media.giphy.com/media/3o7btNa0RUYa5E7iiQ/giphy.gif" alt="funny breakfast fail meme">
+  </div>
+
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
@@ -264,6 +282,7 @@ function checkSpecialName(name) {
 // Submit valentine name (relationship path)
 document.getElementById('btn-submit-valentine')?.addEventListener('click', () => {
   const val = document.getElementById('input-valentine-name')?.value || '';
+  const lower = val.trim().toLowerCase();
 
   const special = checkSpecialName(val);
 
@@ -272,8 +291,8 @@ document.getElementById('btn-submit-valentine')?.addEventListener('click', () =>
   if (special === 'eloho')   return show('result-eloho');
   if (special === 'chidera') return show('result-chidera');
 
-  // fallback for everyone else
-  show('result-gabriel');
+  // Any other name → Breakfast loading troll
+  show('result-breakfast');
 });
 
 // Submit your name (single path)
@@ -296,7 +315,7 @@ setTimeout(() => {
   confetti({ particleCount: 50, spread: 100, origin: { y: 0.6 } });
 }, 1200);
 
-console.log("Valentine prank loaded – Gabriel & Eloho also recognized in name field");
+console.log("Valentine prank loaded – breakfast edition");
 </script>
 </body>
 </html>
