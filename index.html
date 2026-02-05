@@ -71,6 +71,15 @@
     }
     @keyframes pulse { 0%,100% { transform:scale(1); } 50% { transform:scale(1.04); } }
     .sad-vibe { background:#2d3436; color:#dfe6e9; padding:40px; border-radius:20px; }
+    .king-vibe {
+      background: linear-gradient(135deg, #d4af37, #b8860b, #8b6914);
+      color: #0f0f23;
+      padding: 50px 30px;
+      border-radius: 24px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+      font-weight: bold;
+    }
+    .crown { font-size: 4.5rem; margin: 10px 0; }
     .skull { font-size:4rem; margin:20px 0; }
   </style>
 </head>
@@ -99,7 +108,7 @@
     </div>
   </div>
 
-  <!-- Trap stages (the funny NO progression) -->
+  <!-- Trap stages -->
   <div id="trap1" class="hidden">
     <h2>Are you REALLY sure? 😳</h2>
     <div class="buttons">
@@ -164,25 +173,33 @@
   <div id="result-gabriel" class="hidden congrats fade-in">
     <h1>CONGRATULATIONS! 🎉🎊</h1>
     <p>Your Valentine is <strong>Eloho</strong> — she's waiting for you! 😉💖</p>
-    <img class="gif" src="https://media.giphy.com/media/3o7btPCcdNniyf0ArS/giphy.gif" alt="party">
+    <img class="gif" src="https://media.giphy.com/media/3o7btPCcdNniyf0ArS/giphy.gif" alt="celebration">
   </div>
 
   <div id="result-eloho" class="hidden congrats fade-in">
     <h1>CONGRATULATIONS! 🎉🎊</h1>
     <p>Your Valentine is <strong>Gabriel</strong> — he's waiting for you! 😉💙</p>
-    <img class="gif" src="https://media.giphy.com/media/3o7btPCcdNniyf0ArS/giphy.gif" alt="party">
+    <img class="gif" src="https://media.giphy.com/media/3o7btPCcdNniyf0ArS/giphy.gif" alt="celebration">
   </div>
 
   <div id="result-chidera" class="hidden sad-vibe fade-in">
     <h1 class="skull">💀 LEAVE THIS PLACE 💀</h1>
     <p>Go and meet your wife, Chidera is taken! 😤</p>
-    <img class="gif" src="https://media.giphy.com/media/3o6Zt6KHxJTbXCnSvu/giphy.gif" alt="angry">
+    <img class="gif" src="https://media.giphy.com/media/3o6Zt6KHxJTbXCnSvu/giphy.gif" alt="get out">
   </div>
 
   <div id="result-roast" class="hidden sad-vibe fade-in">
     <h1>LOL just kidding 😂💀</h1>
     <p>You'll die single forever bro 😂😂😂</p>
     <img class="gif" src="https://media.giphy.com/media/3o6Zt6KHxJTbXCnSvu/giphy.gif" alt="lonely">
+  </div>
+
+  <div id="result-king" class="hidden king-vibe fade-in">
+    <div class="crown">👑</div>
+    <h1>HE IS THE KING</h1>
+    <h2>HE DOESNT NEED A VALENTINE 🔥👑</h2>
+    <p>Rule your kingdom in peace, Your Majesty 😎</p>
+    <img class="gif" src="https://media.giphy.com/media/26ufm0x3dETvD0qLC/giphy.gif" alt="king crown throne">
   </div>
 
 </div>
@@ -203,8 +220,8 @@ function show(id) {
   if (el) {
     el.classList.remove('hidden');
     el.classList.add('fade-in');
-    if (id.startsWith('result-') || id === 'stage-name') {
-      confetti({ particleCount: 80, spread: 70, origin: { y: 0.6 } });
+    if (id.startsWith('result-')) {
+      confetti({ particleCount: 100, spread: 80, origin: { y: 0.6 } });
     }
   }
 }
@@ -218,45 +235,68 @@ const trapSequence = ['trap1', 'trap2', 'trap3', 'trap4', 'trap5'];
 document.getElementById('btn-single-yes')?.addEventListener('click', () => show('stage-single-want'));
 document.getElementById('btn-single-no')?.addEventListener('click',  () => show('stage-relationship'));
 
-// Single → wants valentine? branch
 document.getElementById('btn-want-yes')?.addEventListener('click', () => show('stage-name'));
 document.getElementById('btn-want-no')?.addEventListener('click', () => {
   trapStep = 0;
   show(trapSequence[trapStep]);
 });
 
-// Trap progression (NO buttons)
 document.getElementById('btn-trap-no-1')?.addEventListener('click', () => show(trapSequence[++trapStep]));
 document.getElementById('btn-trap-no-2')?.addEventListener('click', () => show(trapSequence[++trapStep]));
 document.getElementById('btn-trap-no-3')?.addEventListener('click', () => show(trapSequence[++trapStep]));
 document.getElementById('btn-trap-no-4')?.addEventListener('click', () => show(trapSequence[++trapStep]));
 
-// All YES buttons in trap lead to name
 ['btn-trap-yes-1','btn-trap-yes-2','btn-trap-yes-3','btn-trap-yes-4','btn-trap-yes-5']
-  .forEach(id => {
-    document.getElementById(id)?.addEventListener('click', () => show('stage-name'));
-  });
+  .forEach(id => document.getElementById(id)?.addEventListener('click', () => show('stage-name')));
 
-// Submit valentine name
+// ──── Special name checks ───────
+function checkSpecialName(name) {
+  const lower = (name || '').trim().toLowerCase();
+
+  if (lower.includes('joshua')) return 'king';
+  if (lower.includes('gabriel')) return 'gabriel';
+  if (lower.includes('eloho'))   return 'eloho';
+  if (lower.includes('chidera')) return 'chidera';
+
+  return null;
+}
+
+// Submit valentine name (relationship path)
 document.getElementById('btn-submit-valentine')?.addEventListener('click', () => {
-  const val = (document.getElementById('input-valentine-name')?.value || '').trim().toLowerCase();
-  if (val === 'gabriel')      show('result-gabriel');
-  else if (val === 'eloho')   show('result-eloho');
-  else if (val === 'chidera') show('result-chidera');
-  else                        show('result-gabriel'); // fallback / troll
+  const val = document.getElementById('input-valentine-name')?.value || '';
+
+  const special = checkSpecialName(val);
+
+  if (special === 'king')    return show('result-king');
+  if (special === 'gabriel') return show('result-gabriel');
+  if (special === 'eloho')   return show('result-eloho');
+  if (special === 'chidera') return show('result-chidera');
+
+  // fallback for everyone else
+  show('result-gabriel');
 });
 
-// Submit your name → roast
+// Submit your name (single path)
 document.getElementById('btn-submit-name')?.addEventListener('click', () => {
+  const name = document.getElementById('input-your-name')?.value || '';
+
+  const special = checkSpecialName(name);
+
+  if (special === 'king')    return show('result-king');
+  if (special === 'gabriel') return show('result-gabriel');
+  if (special === 'eloho')   return show('result-eloho');
+  if (special === 'chidera') return show('result-chidera');
+
+  // default roast for everyone else
   show('result-roast');
 });
 
-// Teaser confetti
+// Initial confetti teaser
 setTimeout(() => {
   confetti({ particleCount: 50, spread: 100, origin: { y: 0.6 } });
 }, 1200);
 
-console.log("Valentine prank script loaded");
+console.log("Valentine prank loaded – Gabriel & Eloho also recognized in name field");
 </script>
 </body>
 </html>
