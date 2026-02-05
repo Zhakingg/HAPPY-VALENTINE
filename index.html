@@ -58,129 +58,205 @@
       border-radius: 16px;
       outline: none;
     }
-    input[type="text"]:focus { border-color: #e63946; }
+    input:focus { border-color: #e63946; }
     .hidden { display: none !important; }
     .fade-in { animation: fadeIn 0.9s forwards; }
-    @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+    @keyframes fadeIn { from { opacity:0; transform:translateY(20px); } to { opacity:1; transform:translateY(0); } }
     .congrats {
       background: linear-gradient(135deg, #ffd60a, #ff9f1c, #ff477e);
       color: #1d3557;
       padding: 50px 25px;
       border-radius: 24px;
-      font-size: 1.6rem;
       animation: pulse 2s infinite;
     }
-    @keyframes pulse { 0%,100% { transform: scale(1); } 50% { transform: scale(1.04); } }
-    .sad-vibe { background: #2d3436; color: #dfe6e9; padding: 40px; border-radius: 20px; }
-    .skull { font-size: 4rem; margin: 20px 0; }
+    @keyframes pulse { 0%,100% { transform:scale(1); } 50% { transform:scale(1.04); } }
+    .sad-vibe { background:#2d3436; color:#dfe6e9; padding:40px; border-radius:20px; }
+    .skull { font-size:4rem; margin:20px 0; }
   </style>
 </head>
 <body>
 
 <div class="container" id="main-container">
+
+  <!-- Stage 1 -->
   <div id="stage1" class="fade-in">
     <h1>Valentine's Day Quiz 2026 💘😈</h1>
-    <img class="gif" src="https://media.giphy.com/media/3o6Zt6KHxJTbXCnSvu/giphy.gif" alt="funny valentine gif">
+    <img class="gif" src="https://media.giphy.com/media/3o6Zt6KHxJTbXCnSvu/giphy.gif" alt="funny valentine">
     <h2>Are you single? 🤨💔</h2>
     <div class="buttons">
-      <button class="btn btn-yes" id="btn-yes-single">YES 😭</button>
-      <button class="btn btn-no"  id="btn-no-single">NO 💕</button>
+      <button class="btn btn-yes" id="btn-single-yes">YES 😭</button>
+      <button class="btn btn-no"  id="btn-single-no">NO 💕</button>
     </div>
   </div>
 
-  <div id="stage2_yes" class="hidden">
+  <!-- Single path: Do you want a valentine? -->
+  <div id="stage-single-want" class="hidden">
     <h2>Do you want a Valentine? 😏❤️</h2>
-    <img class="gif" src="https://media.giphy.com/media/l0HlRnAWXxn0MhKLK/giphy.gif" alt="cute begging gif">
+    <img class="gif" src="https://media.giphy.com/media/l0HlRnAWXxn0MhKLK/giphy.gif" alt="begging gif">
     <div class="buttons">
       <button class="btn btn-yes" id="btn-want-yes">YES PLS 😍</button>
       <button class="btn btn-no"  id="btn-want-no">NO 😤</button>
     </div>
   </div>
 
-  <!-- Add the other stages here exactly as before (trap1 to trap5, stage2_no, stage_name, all result divs) -->
-  <!-- For brevity I'm not repeating them all – copy them from your previous version -->
+  <!-- Trap stages (the funny NO progression) -->
+  <div id="trap1" class="hidden">
+    <h2>Are you REALLY sure? 😳</h2>
+    <div class="buttons">
+      <button class="btn btn-yes grow" id="btn-trap-yes-1">YES</button>
+      <button class="btn btn-no" id="btn-trap-no-1">Are you sure sure?</button>
+    </div>
+  </div>
 
-  <!-- Example – paste the rest inside #main-container -->
+  <div id="trap2" class="hidden">
+    <h2>Wanna die single? 😂💀</h2>
+    <div class="buttons">
+      <button class="btn btn-yes grow-more" id="btn-trap-yes-2">YES</button>
+      <button class="btn btn-no" id="btn-trap-no-2">NO</button>
+    </div>
+  </div>
+
+  <div id="trap3" class="hidden">
+    <h2>It's by force ooo! You NEED a Valentine 😤❤️</h2>
+    <div class="buttons">
+      <button class="btn btn-yes grow-mega" id="btn-trap-yes-3">YES</button>
+      <button class="btn btn-no" id="btn-trap-no-3">NO</button>
+    </div>
+  </div>
+
+  <div id="trap4" class="hidden">
+    <h2>Chai... who hurt you? 😢💔</h2>
+    <div class="buttons">
+      <button class="btn btn-yes grow-mega" id="btn-trap-yes-4">YES</button>
+      <button class="btn btn-no" id="btn-trap-no-4">NO</button>
+    </div>
+  </div>
+
+  <div id="trap5" class="hidden">
+    <h2>Okay fine... YES! 😈</h2>
+    <div class="buttons">
+      <button class="btn btn-yes grow-mega" id="btn-trap-yes-5">YES (no choice)</button>
+    </div>
+  </div>
+
+  <!-- In relationship path -->
+  <div id="stage-relationship" class="hidden">
+    <h2>Who is your Valentine? 😏💕</h2>
+    <img class="gif" src="https://media.giphy.com/media/26ufnwz3wDUli7GU0/giphy.gif" alt="romantic gif">
+    <div class="input-area">
+      <input type="text" id="input-valentine-name" placeholder="Type their name...">
+      <br><br>
+      <button class="btn btn-yes" id="btn-submit-valentine">Submit 💌</button>
+    </div>
+  </div>
+
+  <!-- Name for single path -->
+  <div id="stage-name" class="hidden">
+    <h2>Quick! What's your name? 😏</h2>
+    <div class="input-area">
+      <input type="text" id="input-your-name" placeholder="Your name...">
+      <br><br>
+      <button class="btn btn-yes" id="btn-submit-name">Tell me 😈</button>
+    </div>
+  </div>
+
+  <!-- Results -->
+  <div id="result-gabriel" class="hidden congrats fade-in">
+    <h1>CONGRATULATIONS! 🎉🎊</h1>
+    <p>Your Valentine is <strong>Eloho</strong> — she's waiting for you! 😉💖</p>
+    <img class="gif" src="https://media.giphy.com/media/3o7btPCcdNniyf0ArS/giphy.gif" alt="party">
+  </div>
+
+  <div id="result-eloho" class="hidden congrats fade-in">
+    <h1>CONGRATULATIONS! 🎉🎊</h1>
+    <p>Your Valentine is <strong>Gabriel</strong> — he's waiting for you! 😉💙</p>
+    <img class="gif" src="https://media.giphy.com/media/3o7btPCcdNniyf0ArS/giphy.gif" alt="party">
+  </div>
+
+  <div id="result-chidera" class="hidden sad-vibe fade-in">
+    <h1 class="skull">💀 LEAVE THIS PLACE 💀</h1>
+    <p>Go and meet your wife, Chidera is taken! 😤</p>
+    <img class="gif" src="https://media.giphy.com/media/3o6Zt6KHxJTbXCnSvu/giphy.gif" alt="angry">
+  </div>
+
+  <div id="result-roast" class="hidden sad-vibe fade-in">
+    <h1>LOL just kidding 😂💀</h1>
+    <p>You'll die single forever bro 😂😂😂</p>
+    <img class="gif" src="https://media.giphy.com/media/3o6Zt6KHxJTbXCnSvu/giphy.gif" alt="lonely">
+  </div>
 
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
 
 <script>
-// ─── Core show function ─────────────────────────────────────
+// ──────────────────────────────
+// Helpers
+// ──────────────────────────────
+function hideAll() {
+  document.querySelectorAll('#main-container > div').forEach(div => div.classList.add('hidden'));
+}
+
 function show(id) {
-  document.querySelectorAll('#main-container > div').forEach(el => el.classList.add('hidden'));
+  hideAll();
   const el = document.getElementById(id);
   if (el) {
     el.classList.remove('hidden');
     el.classList.add('fade-in');
-    if (id.startsWith('result-') || id === 'stage_name') launchConfetti();
-  } else {
-    console.error('Stage not found:', id);
+    if (id.startsWith('result-') || id === 'stage-name') {
+      confetti({ particleCount: 80, spread: 70, origin: { y: 0.6 } });
+    }
   }
 }
 
-let trapLevel = 0;
-const trapStages = ['trap1','trap2','trap3','trap4','trap5'];
+let trapStep = 0;
+const trapSequence = ['trap1', 'trap2', 'trap3', 'trap4', 'trap5'];
 
-function advanceTrap() {
-  trapLevel = Math.min(trapLevel + 1, trapStages.length - 1);
-  show(trapStages[trapLevel]);
-}
+// ──────────────────────────────
+// Button handlers
+// ──────────────────────────────
+document.getElementById('btn-single-yes')?.addEventListener('click', () => show('stage-single-want'));
+document.getElementById('btn-single-no')?.addEventListener('click',  () => show('stage-relationship'));
 
-function launchConfetti() {
-  const duration = 4000;
-  const end = Date.now() + duration;
-  (function frame() {
-    confetti({ particleCount: 6, angle: 60, spread: 55, origin: { x: 0 } });
-    confetti({ particleCount: 6, angle: 120, spread: 55, origin: { x: 1 } });
-    if (Date.now() < end) requestAnimationFrame(frame);
-  })();
-}
-
-// ─── Event listeners ────────────────────────────────────────
-const btnYesSingle   = document.getElementById('btn-yes-single');
-const btnNoSingle    = document.getElementById('btn-no-single');
-const btnWantYes     = document.getElementById('btn-want-yes');
-const btnWantNo      = document.getElementById('btn-want-no');
-
-if (btnYesSingle)   btnYesSingle.addEventListener('click',  () => show('stage2_yes'));
-if (btnNoSingle)    btnNoSingle.addEventListener('click',   () => show('stage2_no'));
-if (btnWantYes)     btnWantYes.addEventListener('click',    () => show('stage_name'));
-if (btnWantNo)      btnWantNo.addEventListener('click',     advanceTrap);
-
-// Add listeners for trap yes buttons (they all go to name)
-document.querySelectorAll('[id^="trap"] button.btn-yes').forEach(btn => {
-  btn.addEventListener('click', () => show('stage_name'));
+// Single → wants valentine? branch
+document.getElementById('btn-want-yes')?.addEventListener('click', () => show('stage-name'));
+document.getElementById('btn-want-no')?.addEventListener('click', () => {
+  trapStep = 0;
+  show(trapSequence[trapStep]);
 });
 
-// Trap NO progression (add IDs to your trap NO buttons if needed, or use querySelector)
-document.querySelectorAll('#trap1 button.btn-no, #trap2 button.btn-no, #trap3 button.btn-no, #trap4 button.btn-no').forEach(btn => {
-  btn.addEventListener('click', advanceTrap);
-});
+// Trap progression (NO buttons)
+document.getElementById('btn-trap-no-1')?.addEventListener('click', () => show(trapSequence[++trapStep]));
+document.getElementById('btn-trap-no-2')?.addEventListener('click', () => show(trapSequence[++trapStep]));
+document.getElementById('btn-trap-no-3')?.addEventListener('click', () => show(trapSequence[++trapStep]));
+document.getElementById('btn-trap-no-4')?.addEventListener('click', () => show(trapSequence[++trapStep]));
+
+// All YES buttons in trap lead to name
+['btn-trap-yes-1','btn-trap-yes-2','btn-trap-yes-3','btn-trap-yes-4','btn-trap-yes-5']
+  .forEach(id => {
+    document.getElementById(id)?.addEventListener('click', () => show('stage-name'));
+  });
 
 // Submit valentine name
-const submitValentine = document.getElementById('submit-valentine');
-if (submitValentine) {
-  submitValentine.addEventListener('click', () => {
-    const name = (document.getElementById('valentine-name')?.value || '').trim().toLowerCase();
-    if (name === 'gabriel')      show('result-gabriel');
-    else if (name === 'eloho')   show('result-eloho');
-    else if (name === 'chidera') show('result-chidera');
-    else                         show('result-gabriel'); // fallback
-  });
-}
+document.getElementById('btn-submit-valentine')?.addEventListener('click', () => {
+  const val = (document.getElementById('input-valentine-name')?.value || '').trim().toLowerCase();
+  if (val === 'gabriel')      show('result-gabriel');
+  else if (val === 'eloho')   show('result-eloho');
+  else if (val === 'chidera') show('result-chidera');
+  else                        show('result-gabriel'); // fallback / troll
+});
 
-// Roast
-const submitName = document.getElementById('submit-name');
-if (submitName) {
-  submitName.addEventListener('click', () => show('result-roast'));
-}
+// Submit your name → roast
+document.getElementById('btn-submit-name')?.addEventListener('click', () => {
+  show('result-roast');
+});
 
-// Start confetti teaser
-setTimeout(launchConfetti, 1500);
+// Teaser confetti
+setTimeout(() => {
+  confetti({ particleCount: 50, spread: 100, origin: { y: 0.6 } });
+}, 1200);
 
-console.log("Script loaded – buttons should now work");
+console.log("Valentine prank script loaded");
 </script>
 </body>
 </html>
